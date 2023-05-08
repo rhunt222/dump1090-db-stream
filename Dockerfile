@@ -18,7 +18,7 @@ ENV CONNECT_ATTEMPT_LIMIT="10"
 ENV CONNECT_ATTEMPT_DELAY="5.0"
 
 # Add a non-root user
-RUN adduser --disabled-password "hunta03"
+RUN adduser --disabled-password hunta03
 
 # Switch to the new user
 USER "hunta03"
