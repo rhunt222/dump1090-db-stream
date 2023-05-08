@@ -26,6 +26,5 @@ ENV VIRTUAL_ENV=/opt/venv
 RUN python -m venv $VIRTUAL_ENV
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 RUN pip install --no-cache-dir --upgrade pip
-RUN pip install --no-cache-dir psycopg2-binary==2.9.6
 
 ENTRYPOINT ["python", "/dump1090-postgres.py"]
