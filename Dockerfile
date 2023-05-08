@@ -1,4 +1,4 @@
-FROM arm64v8/alpine:3.14
+FROM alpine/latest
 LABEL org.opencontainers.image.source=https://github.com/rhunt222/dump1090-db-stream
 LABEL org.opencontainers.image.authors="richard.hunt2@gmail.com"
 LABEL description="Docker container to ingest ADS/B data via Dump1090 streams and store it in a PostgreSQL database."
@@ -16,6 +16,8 @@ ENV BUFFER_SIZE="10000"
 ENV BATCH_SIZE="1"
 ENV CONNECT_ATTEMPT_LIMIT="10"
 ENV CONNECT_ATTEMPT_DELAY="5.0"
+
+RUN apk add --no-cache python3
 
 COPY create_schema.sql .
 COPY dump1090-postgres.py .
