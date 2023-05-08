@@ -18,6 +18,7 @@ ENV CONNECT_ATTEMPT_LIMIT="10"
 ENV CONNECT_ATTEMPT_DELAY="5.0"
 
 # Add a non-root user
+RUN apt add --no-cache adduser
 RUN adduser --system --disabled-password hunta03
 
 # Switch to the new user
