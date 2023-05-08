@@ -18,10 +18,10 @@ ENV CONNECT_ATTEMPT_LIMIT="10"
 ENV CONNECT_ATTEMPT_DELAY="5.0"
 
 # Add a non-root user
-RUN adduser --disabled-password myuser
+RUN adduser --disabled-password hunta03
 
 # Switch to the new user
-USER myuser
+USER hunta03
 
 RUN apt update && apt add --no-cache postgresql-client
 COPY create_schema.sql .
