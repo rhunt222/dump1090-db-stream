@@ -17,13 +17,6 @@ ENV BATCH_SIZE="1"
 ENV CONNECT_ATTEMPT_LIMIT="10"
 ENV CONNECT_ATTEMPT_DELAY="5.0"
 
-# Add a non-root user
-RUN apt add --no-cache adduser
-RUN adduser --system --disabled-password hunta03
-
-# Switch to the new user
-USER hunta03
-
 RUN apt update && apt add --no-cache postgresql-client
 COPY create_schema.sql .
 COPY dump1090-postgres.py .
