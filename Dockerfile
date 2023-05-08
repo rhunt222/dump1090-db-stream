@@ -1,4 +1,4 @@
-FROM alpine/latest
+FROM alpine:latest
 LABEL org.opencontainers.image.source=https://github.com/rhunt222/dump1090-db-stream
 LABEL org.opencontainers.image.authors="richard.hunt2@gmail.com"
 LABEL description="Docker container to ingest ADS/B data via Dump1090 streams and store it in a PostgreSQL database."
