@@ -20,14 +20,14 @@ ENV PYTHONPATH=/usr/local/lib/python3.7/site-packages
 
 RUN apk add --no-cache python3
 RUN apk add --no-cache postgresql-libs && apk add --no-cache --virtual .build-deps gcc musl-dev postgresql-dev
-RUN pip install psycopg2-binary==2.9.6
+RUN pip install --no-cache-dir virtualenv
 
 COPY create_schema.sql .
 COPY dump1090-postgres.py .
 COPY requirements.txt .
 ENV VIRTUAL_ENV=/opt/venv
-RUN python -m venv $VIRTUAL_ENV
+RUN python -m virtualenv $VIRTUAL_ENV
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
-RUN pip install --no-cache-dir --upgrade pip
+RUN /bin/sh -c "source $VIRTUAL_ENV/bin/activate && pip install --no-cache-dir --upgrade pip && pip install --no-cache-dir psycopg2-binary==2.9.6"
 
 ENTRYPOINT ["python", "/dump1090-postgres.py"]
