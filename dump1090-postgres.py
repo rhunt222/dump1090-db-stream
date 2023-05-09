@@ -23,12 +23,11 @@ dbhost = "192.168.86.29" #os.environ.get('PGHOST')
 dbport = "5432" #os.environ.get('PGPORT')
 dbuser = "hunta03" #os.environ.get('PGUSER')
 dbpassword = "airplanes!" #os.environ.get('PGPASSWORD')
-BUFFER_SIZE = os.environ.get('BUFFER_SIZE')
-BATCH_SIZE = os.environ.get('BATCH_SIZE')
-CONNECT_ATTEMPT_LIMIT = os.environ.get('CONNECT_ATTEMPT_LIMIT')
-CONNECT_ATTEMPT_DELAY = os.environ.get('CONNECT_ATTEMPT_DELAY')
+BUFFER_SIZE = "10000" #os.environ.get('BUFFER_SIZE')
+BATCH_SIZE = "1" #os.environ.get('BATCH_SIZE')
+CONNECT_ATTEMPT_LIMIT = "10" #os.environ.get('CONNECT_ATTEMPT_LIMIT')
+CONNECT_ATTEMPT_DELAY = "5.0" #os.environ.get('CONNECT_ATTEMPT_DELAY')
 verbose = False
-
 
 def args_parse():
     """ Handle argparse options for script """
