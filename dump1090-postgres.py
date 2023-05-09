@@ -35,8 +35,8 @@ def args_parse():
             dump1090 messages then insert them into a database")
     parser.add_argument("--dump1090",
                         type=str, default=dumphost,
-                        help=f"This is the network location of your dump1090 broadcast.\
-                                Defaults to {dumphost}")
+                        help="This is the network location of your dump1090 broadcast.\
+                                Defaults to {}".format(dumphost))
     parser.add_argument("--port",
                         type=int, default=dumpport,
                         help=f"The port broadcasting dump1090 messages in\
