@@ -185,9 +185,7 @@ def main():
             break
         except socket.error:
             count_failed_connection_attempts += 1
-            print(f"{datetime.datetime.now().strftime('%d %b %y %H:%M:%S')}: \
-                    Cannot connect to dump1090 broadcast. Making attempt \
-                    {count_failed_connection_attempts}.")
+            print("%s: Cannot connect to dump1090 broadcast. Making attempt %d." % (datetime.datetime.now().strftime('%d %b %y %H:%M:%S'), count_failed_connection_attempts))
             time.sleep(args.connect_attempt_delay)
     else:
         print("{}: Failed to get socket connection".format(datetime.datetime.now().strftime('%d %b %y %H:%M:%S')))
