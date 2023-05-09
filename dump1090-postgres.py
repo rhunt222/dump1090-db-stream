@@ -213,7 +213,7 @@ def main():
                 pass
 
             if not message:
-                print(f"{datetime.datetime.now().strftime('%d %b %y %H:%M:%S')}: No broadcast received. Attempting to reconnect")
+                print(datetime.datetime.now().strftime('%d %b %y %H:%M:%S') + "No broadcast received. Attempting to reconnect")
                 time.sleep(args.connect_attempt_delay)
                 s.close()
                 while count_failed_connection_attempts < args.connect_attempt_limit:
