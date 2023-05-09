@@ -39,22 +39,22 @@ def args_parse():
                                 Defaults to {}".format(dumphost))
     parser.add_argument("--port",
                         type=int, default=dumpport,
-                        help=f"The port broadcasting dump1090 messages in\
+                        help="The port broadcasting dump1090 messages in\
                                 SBS-1 BaseStation format.\
                                 Defaults to {}".format(dumpport))
     parser.add_argument("-d", "--dbname",
                         type=str, default=dbname,
-                        help=f"The location of a database file to use or create.\
+                        help="The location of a database file to use or create.\
                                 Defaults to {}".format(dbname))
     parser.add_argument("--dbhost",
                         type=str, default=dbhost,
-                        help=f"The host of the database. Defaults to {}".format(dbhost))
+                        help="The host of the database. Defaults to {}".format(dbhost))
     parser.add_argument("--dbport",
                         type=str, default=dbport,
-                        help=f"The port of the database. Defaults to {}".format(dbport))
+                        help="The port of the database. Defaults to {}".format(dbport))
     parser.add_argument("-U", "--dbuser",
                         type=str, default=dbuser,
-                        help=f"The user with which to connect to the database\
+                        help="The user with which to connect to the database\
                                 Defaults to {}".format(dbuser))
     parser.add_argument("--dbschema",
                         type=str, default=dbschema)
