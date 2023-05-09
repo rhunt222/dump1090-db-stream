@@ -18,6 +18,8 @@ ENV CONNECT_ATTEMPT_LIMIT="10"
 ENV CONNECT_ATTEMPT_DELAY="5.0"
 
 RUN apk add --no-cache python3
+RUN apk add --no-cache postgresql-libs && apk add --no-cache --virtual .build-deps gcc musl-dev postgresql-dev
+RUN pip install psycopg2-binary==2.9.6
 
 COPY create_schema.sql .
 COPY dump1090-postgres.py .
