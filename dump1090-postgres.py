@@ -148,7 +148,7 @@ def connect_to_db(db, user, host, password, port, schema):
         db, user, host, password, port, "dump1090 ADS-B Loader", schema
         )
     try:
-        print(f"{datetime.datetime.now().strftime('%d %b %y %H:%M:%S')}: Connecting to db")
+        print('{}: Connected to dump1090 broadcast'.format(datetime.datetime.now().strftime('%d %b %y %H:%M:%S')))
         return psycopg2.connect(connection)
     except psycopg2.Error as e:
         print(e.pgcode)
