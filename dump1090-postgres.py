@@ -181,8 +181,7 @@ def main():
         try:
             s = connect_to_socket(args.dump1090, args.port)
             count_failed_connection_attempts = 1
-            print(f"{datetime.datetime.now().strftime('%d %b %y %H:%M:%S')}: \
-                    Connected to dump1090 broadcast")
+            print("{}: Connected to dump1090 broadcast".format(datetime.datetime.now().strftime('%d %b %y %H:%M:%S')))
             break
         except socket.error:
             count_failed_connection_attempts += 1
@@ -191,8 +190,7 @@ def main():
                     {count_failed_connection_attempts}.")
             time.sleep(args.connect_attempt_delay)
     else:
-        print(f"{datetime.datetime.now().strftime('%d %b %y %H:%M:%S')}: \
-                Failed to get socket connection")
+        print("{}: Failed to get socket connection".format(datetime.datetime.now().strftime('%d %b %y %H:%M:%S')))
         print("Restarting...")
         sys.exit()
 
