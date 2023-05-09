@@ -12,14 +12,14 @@ import psycopg2
 from psycopg2 import sql
 
 # Dump1090
-dumphost = "192.168.86.29" #os.environ.get('DUMP1090HOST')
+dumphost = "localhost" #os.environ.get('DUMP1090HOST')
 dumpport = "30003" #os.environ.get('DUMP1090PORT')
 # Database
 # postgres://postgres:test@172.0.0.1:5432/postgres
 dbname = "adsb" #os.environ.get('PGDATABASE')
 dbschema = "adsb" #os.environ.get('PGSCHEMA')
 dbtable = "adsb_messages" #os.environ.get('PGTABLE')
-dbhost = "192.168.86.29" #os.environ.get('PGHOST')
+dbhost = "localhost" #os.environ.get('PGHOST')
 dbport = "5432" #os.environ.get('PGPORT')
 dbuser = "hunta03" #os.environ.get('PGUSER')
 dbpassword = "airplanes!" #os.environ.get('PGPASSWORD')
