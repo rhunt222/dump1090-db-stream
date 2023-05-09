@@ -12,17 +12,17 @@ import psycopg2
 from psycopg2 import sql
 
 # Dump1090
-dumphost = os.environ.get('DUMP1090HOST')
-dumpport = os.environ.get('DUMP1090PORT')
+dumphost = "192.168.86.29" #os.environ.get('DUMP1090HOST')
+dumpport = "30003" #os.environ.get('DUMP1090PORT')
 # Database
 # postgres://postgres:test@172.0.0.1:5432/postgres
-dbname = os.environ.get('PGDATABASE')
-dbschema = os.environ.get('PGSCHEMA')
-dbtable = os.environ.get('PGTABLE')
-dbhost = os.environ.get('PGHOST')
-dbport = os.environ.get('PGPORT')
-dbuser = os.environ.get('PGUSER')
-dbpassword = os.environ.get('PGPASSWORD')
+dbname = "adsb" #os.environ.get('PGDATABASE')
+dbschema = "adsb" #os.environ.get('PGSCHEMA')
+dbtable = "adsb_messages" #os.environ.get('PGTABLE')
+dbhost = "192.168.86.29" #os.environ.get('PGHOST')
+dbport = "5432" #os.environ.get('PGPORT')
+dbuser = "hunta03" #os.environ.get('PGUSER')
+dbpassword = "airplanes!" #os.environ.get('PGPASSWORD')
 BUFFER_SIZE = os.environ.get('BUFFER_SIZE')
 BATCH_SIZE = os.environ.get('BATCH_SIZE')
 CONNECT_ATTEMPT_LIMIT = os.environ.get('CONNECT_ATTEMPT_LIMIT')
