@@ -62,20 +62,20 @@ def args_parse():
                         type=str, default=dbpassword)
     parser.add_argument("--buffer-size",
                         type=int, default=BUFFER_SIZE,
-                        help=f"An integer of the number of bytes to read at a time from the stream.\
+                        help="An integer of the number of bytes to read at a time from the stream.\
                                 Defaults to {}".format(BUFFER_SIZE))
     parser.add_argument("--batch-size",
                         type=int, default=BATCH_SIZE,
-                        help=f"An integer of the number of rows to write to the database at a time.\
+                        help="An integer of the number of rows to write to the database at a time.\
                                 Defaults to {}".format(BATCH_SIZE))
     parser.add_argument("--connect-attempt-limit",
                         type=int, default=CONNECT_ATTEMPT_LIMIT,
-                        help=f"An integer of the number of times to try (and fail) to connect\
+                        help="An integer of the number of times to try (and fail) to connect\
                                 to the dump1090 broadcast before quitting.\
                                 Defaults to {}".format(CONNECT_ATTEMPT_LIMIT))
     parser.add_argument("--connect-attempt-delay",
                         type=float, default=CONNECT_ATTEMPT_DELAY,
-                        help=f"The number of seconds to wait after a failed connection attempt\
+                        help="The number of seconds to wait after a failed connection attempt\
                                 before trying again.\
                                 Defaults to {}".format(CONNECT_ATTEMPT_DELAY))
     parser.add_argument("--verbose",
