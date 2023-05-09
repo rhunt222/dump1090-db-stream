@@ -41,21 +41,21 @@ def args_parse():
                         type=int, default=dumpport,
                         help=f"The port broadcasting dump1090 messages in\
                                 SBS-1 BaseStation format.\
-                                Defaults to {dumpport}")
+                                Defaults to {}".format(dumpport))
     parser.add_argument("-d", "--dbname",
                         type=str, default=dbname,
                         help=f"The location of a database file to use or create.\
-                                Defaults to {dbname}")
+                                Defaults to {}".format(dbname))
     parser.add_argument("--dbhost",
                         type=str, default=dbhost,
-                        help=f"The host of the database. Defaults to {dbhost}")
+                        help=f"The host of the database. Defaults to {}".format(dbhost))
     parser.add_argument("--dbport",
                         type=str, default=dbport,
-                        help=f"The port of the database. Defaults to {dbport}")
+                        help=f"The port of the database. Defaults to {}".format(dbport))
     parser.add_argument("-U", "--dbuser",
                         type=str, default=dbuser,
                         help=f"The user with which to connect to the database\
-                                Defaults to {dbuser}")
+                                Defaults to {}".format(dbuser))
     parser.add_argument("--dbschema",
                         type=str, default=dbschema)
     parser.add_argument("--dbpass",
@@ -63,21 +63,21 @@ def args_parse():
     parser.add_argument("--buffer-size",
                         type=int, default=BUFFER_SIZE,
                         help=f"An integer of the number of bytes to read at a time from the stream.\
-                                Defaults to {BUFFER_SIZE}")
+                                Defaults to {}".format(BUFFER_SIZE))
     parser.add_argument("--batch-size",
                         type=int, default=BATCH_SIZE,
                         help=f"An integer of the number of rows to write to the database at a time.\
-                                Defaults to {BATCH_SIZE}")
+                                Defaults to {}".format(BATCH_SIZE))
     parser.add_argument("--connect-attempt-limit",
                         type=int, default=CONNECT_ATTEMPT_LIMIT,
                         help=f"An integer of the number of times to try (and fail) to connect\
                                 to the dump1090 broadcast before quitting.\
-                                Defaults to {CONNECT_ATTEMPT_LIMIT}")
+                                Defaults to {}".format(CONNECT_ATTEMPT_LIMIT))
     parser.add_argument("--connect-attempt-delay",
                         type=float, default=CONNECT_ATTEMPT_DELAY,
                         help=f"The number of seconds to wait after a failed connection attempt\
                                 before trying again.\
-                                Defaults to {CONNECT_ATTEMPT_DELAY}")
+                                Defaults to {}".format(CONNECT_ATTEMPT_DELAY))
     parser.add_argument("--verbose",
                         action="store_true", default=verbose,
                         help="Print out the messages as they're received.\
