@@ -16,6 +16,7 @@ ENV BUFFER_SIZE="10000"
 ENV BATCH_SIZE="1"
 ENV CONNECT_ATTEMPT_LIMIT="10"
 ENV CONNECT_ATTEMPT_DELAY="5.0"
+ENV PYTHONPATH=/usr/local/lib/python3.7/site-packages
 
 RUN apk add --no-cache python3
 RUN apk add --no-cache postgresql-libs && apk add --no-cache --virtual .build-deps gcc musl-dev postgresql-dev
