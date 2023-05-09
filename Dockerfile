@@ -3,9 +3,9 @@ LABEL org.opencontainers.image.source=https://github.com/rhunt222/dump1090-db-st
 LABEL org.opencontainers.image.authors=""
 LABEL description="Docker container to ingest ADS/B data via Dump1090 streams and store it in a PostgreSQL database."
 
-ENV DUMP1090HOST="192.168.86.30"
+ENV DUMP1090HOST="192.168.86.29"
 ENV DUMP1090PORT="30003"
-ENV PGHOST="192.168.86.30"
+ENV PGHOST="192.168.86.29"
 ENV PGPORT="5432"
 ENV PGDATABASE="adsb"
 ENV PGSCHEMA="adsb"
