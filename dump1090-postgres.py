@@ -233,7 +233,7 @@ def main():
             data = data_str.split("\n")
             commit_data(client, data, ds, args)
     except KeyboardInterrupt:
-        print(f"\n{ts} Closing connection")
+        print("\n" + datetime.datetime.now().strftime('%d %b %y %H:%M:%S') + " Closing connection")
         s.close()
         client.commit()
         client.close()
