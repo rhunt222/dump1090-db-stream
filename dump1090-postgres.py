@@ -213,23 +213,23 @@ def main():
                 pass
 
             if not message:
-                print((ts, "No broadcast received. Attempting to reconnect"))
+                print(f"{datetime.datetime.now().strftime('%d %b %y %H:%M:%S')}: No broadcast received. Attempting to reconnect")
                 time.sleep(args.connect_attempt_delay)
                 s.close()
                 while count_failed_connection_attempts < args.connect_attempt_limit:
                     try:
                         s = connect_to_socket(args.dump1090, args.port)
                         count_failed_connection_attempts = 1
-                        print(f"{ts}: Reconnected!")
+                        print(datetime.datetime.now().strftime('%d %b %y %H:%M:%S') + ": Reconnected!")
                         break
                     except socket.error:
                         count_failed_connection_attempts += 1
-                        print(f"The attempt failed. Making attempt \
-                                {count_failed_connection_attempts}")
+                        print("{ts}: The attempt failed. Making attempt {count_failed_connection_attempts}".format(ts=ts, count_failed_connection_attempts=count_failed_connection_attempts))
                         time.sleep(args.connect_attempt_delay)
                 else:
                     sys.exit()
                 continue
+
             data = data_str.split("\n")
             commit_data(client, data, ds, args)
     except KeyboardInterrupt:
