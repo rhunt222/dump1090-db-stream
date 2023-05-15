@@ -1,4 +1,4 @@
-#!/usr/local/bin/python
+#!/usr/local/bin/python3
 # encoding: utf-8
 "Dump1090 to PostgreSQL DB ingestor"
 
